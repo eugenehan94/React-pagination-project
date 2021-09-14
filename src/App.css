@@ -1,38 +1,87 @@
-.App {
+.pagination-project-title {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.pagination-clips-container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  margin-bottom: 2rem;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.pagination-clips {
+  text-align: center;
+  margin: 0 1rem;
+  padding: 1rem;
 }
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.pagination-image {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  border-radius: 10%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+}
+.pagination-author-name {
+  letter-spacing: 1px;
+  font-weight: bold;
+  margin-top: 0;
+}
+.pagination-profile-link {
+  text-decoration: none;
+  color: black;
+  border: 1px solid rgb(28, 209, 28);
+  background: rgb(28, 209, 28);
+  padding: 5px 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
+  border-radius: 20px;
+}
+.pagination-profile-link:hover {
   color: white;
+  border: 1px solid rgb(18, 138, 18);
+  background: rgb(18, 138, 18);
+}
+.pagination-btn-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 3rem;
 }
 
-.App-link {
-  color: #61dafb;
+.pagination-prev-btn,
+.pagination-next-btn,
+.pagination-page-btn {
+  font-size: 18px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.pagination-prev-btn,
+.pagination-next-btn {
+  background: none;
+  border: none;
+  cursor: pointer;
+}
+.pagination-page-btn {
+  margin: 0.5rem;
+}
+.pagination-active-btn {
+  background: rgb(18, 138, 18);
+  border: 1px solid rgb(18, 138, 18);
+  color: white;
+  cursor: pointer;
+}
+
+/* Tablet*/
+@media screen and (max-width: 800px) {
+  .pagination-clips-container {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+/* Mobile Device*/
+@media screen and (max-width: 550px) {
+  .pagination-clips-container {
+    grid-template-columns: auto;
+    gap: 0.5rem;
+    margin-bottom: 1rem;
   }
 }
